@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="ClosedXML" Version="0.100.3" />
+    <PackageReference Include="jsreport.Binary" Version="3.9.0" />
+    <PackageReference Include="jsreport.Embedded" Version="1.0.5" />
+    <PackageReference Include="jsreport.Local" Version="3.8.1" />
+    <PackageReference Include="NReco.PdfGenerator" Version="1.2.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+</Project>
