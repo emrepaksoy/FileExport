@@ -1,4 +1,5 @@
 ﻿using Bogus;
+using System.ComponentModel;
 
 namespace FileExport.Api.Model
 {
@@ -21,11 +22,17 @@ namespace FileExport.Api.Model
     }
     public class User
     {
+    
         public Guid id { get; set; }
+        [DisplayName("Ad")]
         public string FirstName { get; set; }
+        [DisplayName("Soyad")]
         public string LastName { get; set; }
+        [DisplayName("Email adresi")]
         public string EmailAddress { get; set; }
+        [DisplayName("Yaş")]
         public int Age { get; set; }
+        [DisplayName("Cinsiyet")]
         public Gender Gender { get; set; }
     }
 

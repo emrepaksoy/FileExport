@@ -2,6 +2,7 @@
 using jsreport.Binary;
 using jsreport.Local;
 using jsreport.Types;
+using System.ComponentModel;
 using System.Reflection;
 
 
@@ -23,11 +24,12 @@ namespace FileExport.Api.interfaces
         {
             System.Data.DataTable dt = new System.Data.DataTable(typeof(T).Name);
 
-            PropertyInfo[] columns = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            PropertyInfo[] columns = typeof(T).GetProperties();
+           
 
             foreach (PropertyInfo pi in columns)
             {
-                dt.Columns.Add(pi.Name);
+                dt.Columns.Add(pi.GetCustomAttribute<DisplayNameAttribute>() != null ? pi.GetCustomAttribute<DisplayNameAttribute>().DisplayName : pi.Name);
             }
 
             foreach (var item in data)
